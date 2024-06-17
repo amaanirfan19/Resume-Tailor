@@ -34,6 +34,7 @@ poetry install
 
 To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
+
 **Make sure to delete files from outputs folder first.**
 
 ```bash
@@ -41,6 +42,11 @@ poetry run ai_resume_tailor
 ```
 
 This command initializes the ai-resume-tailor Crew, assembling the agents and assigning them tasks as defined in your configuration.
+
+##AgentOps
+
+https://github.com/amaanirfan19/Resume-Tailor/assets/52991990/d8c9dcac-e58d-401f-8921-9c4766c6057a
+
 
 ## Understanding Your Crew
 
