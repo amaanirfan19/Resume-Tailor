@@ -1,0 +1,32 @@
+skill_extraction_task:
+  description: |
+    Analyse the job description you received and identify all languages, frameworks, tools and any additional keywords required for the position in this job description:
+    {job_description}
+  expected_output: |
+    Output a list of the extracted info in this manner:
+    Job responsibilities:
+    LANGUAGES:
+    FRAMEWORKS:
+    TOOLS:
+    KEYWORDS:
+
+resume_modify_task:
+  description: |
+    Review the job description summary you received and the provided latex resume of a candidate who wishes to apply to that job:
+    {latex_resume}
+    Perform the following 2 tasks sequentially:
+    1. Modify the Skills section in the latex code above to add the extracted LANGUAGES, FRAMEWORKS and TOOLS which are not already there.
+    2. Modify the Experience section for each company by modifying the points by using as many KEYWORDS combined with LANGUAGES, FRAMEWORKS and TOOLS from the job description as possible.
+    When writing the points for experiences, use the X by Y by Z formula which is: Accomplished [X] as measured by [Y], by doing [Z].
+    Make sure to start each bullet point in the latex with a strong verb and use relevant numbers and percentages to quantify achievements.
+    Remember when including percentages that in latex, its has to have a backslash before the sign like this "\%".
+    Avoid changing the total number of experiences to avoid fabricating any information and only modify the exisitng experiences.
+    Make sure to avoid using the same keywords for every bullet point in the experiences and projects.
+    3. Modify the Projects section by modifying the points by using as many KEYWORDS combined with LANGUAGES, FRAMEWORKS and TOOLS from the job description as possible.
+    Make sure that all syntax in the latex stays exactly the same and only modify the text part of the latex which is encapsuated in the curly brackets.
+  expected_output: |
+    All the skills, experiences and project sections should be updated to match the job description.
+    They should sounds impressive and have a formal tone with perfect grammar.
+    My personal information should remain as it is and included in the output.
+    Output only the latex code without any explanation and DO NOT use backticks like ``` for the generated LaTeX code. 
+    Just text.

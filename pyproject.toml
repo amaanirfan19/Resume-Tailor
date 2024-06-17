@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ai_resume_tailor"
+version = "0.1.0"
+description = "ai-resume-tailor using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = {extras = ["tools"], version = "^0.30.11"}
+bs4 = "^0.0.2"
+langchain-community = "0.0.38"
+agentops = "^0.2.3"
+
+requests = "2.31.0"
+cohere = "^5.5.7"
+langchain-groq = "^0.1.5"
+
+[tool.poetry.scripts]
+ai_resume_tailor = "ai_resume_tailor.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

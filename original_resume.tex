@@ -1,0 +1,188 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{geometry}
+
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\geometry{
+    a4paper,
+    left=0.5cm,
+    right=0.5cm,
+    top=1.5cm,
+    bottom=0.5cm,
+}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-9pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {\color{darkgray}{#1} \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \footnotesize {#2}\\
+      \textit{\small#3} & \textit{\footnotesize  #4} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-1pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape John Doe} \\ \vspace{1pt}
+    \small 123-456-7890 $|$ \href{myemail@gmail.com}{\underline{myemail@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/john-doe/}{\underline{linkedin/john-doe}} $|$
+    \href{https://github.com/johndoe}{\underline{github/johndoe}}
+\end{center}
+
+
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{2020 -- 2025}
+      {Bachelors of Mathematics Honours (Minor in Computing)}{Waterloo, ON}
+      \resumeItemListStart
+        \resumeItem{Awarded President's Scholarship}
+         \resumeItem{GPA: 3.7}
+        \resumeItem{Technical Product Manager at WAT.AI Club}
+    \resumeItem{\textbf{Relevant Courses}: Data Structures} \\
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C}\\ 
+     \textbf{Libraries and Frameworks}{: TensorFlow}\\
+     \textbf{Tools}{: Git, Docker}
+    }}
+ \end{itemize}
+
+
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+
+    \resumeSubheading
+      {\underline{Data Scientist}}{Sep 2023 -- Dec 2023}
+      {\textbf{IBM}}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Fabricated a LLMOps infrastructure using just open-source tools and custom LLM models and deployed the application on Kubernetes using LangServe.}
+        \resumeItem{Reduced model hallucination by 30\% and improved faithfulness score by 40\% with advanced prompt engineering and chunking strategies.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {\underline{Data Scientist}}{May 2023 -- July 2023}
+      {\textbf{The Globe and Mail}}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Conducted feature engineering on a dataset of over 1 million clickstream data records using PySpark to identify trends used for A/B testing which aided in business analysis.}
+        \resumeItem{Undertook News Cycle Analysis on historical data by performing feature extraction using NLP techniques such as Named Entity Recognition (NER) and increased subscription rates by 10\%.}
+      \resumeItemListEnd
+
+       \resumeSubheading
+      {\underline{Software Engineer}}{May 2022 -- Aug 2022}
+      {\textbf{Vivid Seats Inc}}{Toronto, ON}
+      \resumeItemListStart
+      \resumeItem{Engineered a geolocation microservice in SpringBoot which was integrated by multiple applications.}
+        \resumeItem{Developed multiple features for a web application and RESTful APIs for the backend using Next.js and Express to provide seamless communication between 5+ core services.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {\underline{Software Engineer}}{Sep 2021 -- Dec 2021}
+      {\textbf{MeazureUp}}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Designed and produced a custom food label printing prototype for BLE devices, resulting in a 60\% increase in restaurant productivity.}
+        \resumeItem{Implemented Single Sign-On with OAUTH2 architecture in React Native, improving user efficiency by 20\%.}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\href{https://github.com/johndoe/MedChat}{MedChat $|$ Cohere RAG Hackathon 1st place \faPaperclip}}{} 
+
+          \resumeItemListStart
+            \resumeItem{Multi-modal chat interface for medical professionals to query medical literature and use AI-powered diagnostic tools.}
+            \resumeItem{Leading a team of 5 as a technical product manager to guide for further innovation.}
+          \resumeItemListEnd
+
+             \resumeProjectHeading
+      {\href{https://github.com/johndoe/Snake-Game-AI}{Snake Game AI $|$ Reinforcement learning \faPaperclip}}{}
+          \resumeItemListStart
+            \resumeItem{Assembled an agent-based model using Deep Q-Learning with PyTorch and created an environment using PyGame.}
+            \resumeItem{Optimized convergence by implementing exploration-exploitation strategies and fine-tuning hyperparameters.}
+          \resumeItemListEnd
+       
+          
+    \resumeSubHeadingListEnd
+
+
+\end{document}
