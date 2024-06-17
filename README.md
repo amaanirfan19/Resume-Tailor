@@ -43,7 +43,7 @@ poetry run ai_resume_tailor
 
 This command initializes the ai-resume-tailor Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-##AgentOps
+## AgentOps
 
 https://github.com/amaanirfan19/Resume-Tailor/assets/52991990/d8c9dcac-e58d-401f-8921-9c4766c6057a
 
